@@ -1,0 +1,20 @@
+list2 = [9,8,7,6,5,4,3,3,6,5,4,6]
+
+less_or_equal_2 = []
+greater_than_2 = []
+
+for i in range(len(list2)):
+    count = 0
+    
+    for j in range(len(list2)):
+        if list2[i] == list2[j]:
+            count += 1
+    
+    if count <= 2 and list2[i] not in less_or_equal_2:
+        less_or_equal_2.append(list2[i])
+        
+    elif count > 2 and list2[i] not in greater_than_2:
+        greater_than_2.append(list2[i])
+
+print("two or less than two:", less_or_equal_2)
+print("three or less than three:", greater_than_2)
